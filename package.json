@@ -1,12 +1,24 @@
 {
-  "name": "arwa-website",
-  "version": "1.0.0",
-  "description": "Professional homepage for ARWA Prosthetic Eye Center",
-  "main": "index.html",
+  "name": "next-app",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "dev": "npx -y serve ."
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "dependencies": {
+    "next": "16.1.7",
+    "react": "19.2.3",
+    "react-dom": "19.2.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.1.7",
+    "typescript": "^5"
+  }
 }
