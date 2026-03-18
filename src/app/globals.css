@@ -975,13 +975,15 @@ header {
 
 /* Responsive Fixes */
 @media (max-width: 768px) {
-    .hero h1 { font-size: 2.8rem; }
+    .container { padding: 0 20px; }
+    .hero { padding: 60px 0 80px; }
+    .hero h1 { font-size: 2rem; margin-bottom: 12px; }
+    .hero p { font-size: 1rem; margin-bottom: 24px; }
     .page-hero h1 { font-size: 1.8rem; }
     .floating-whatsapp { bottom: 20px; right: 20px; width: 50px; height: 50px; font-size: 2rem; }
     .top-bar-flex { flex-direction: column; gap: 10px; text-align: center; }
     .social-links { display: none; }
     .contact-info span { margin: 0 10px; display: block; margin-bottom: 5px; }
-    .container { padding: 0 16px; }
 }
 
 /* Responsive Main */
@@ -1008,14 +1010,50 @@ header {
 @media (max-width: 768px) {
     .nav-links { display: none; }
     .mobile-menu-btn { display: block; }
+    .hero { 
+        padding: 40px 0 60px; /* Even tighter to show buttons earlier */
+        text-align: center;
+    }
+    .hero h1 { 
+        font-size: 2.2rem; 
+        line-height: 1.1; 
+        margin-bottom: 16px;
+        letter-spacing: -1px;
+    }
+    .hero p { 
+        font-size: 1rem; 
+        margin: 0 auto 32px;
+        max-width: 100%;
+    }
     .hero-btns {
         flex-direction: column;
-        gap: 15px;
+        gap: 12px;
+        align-items: center;
+        width: 100%;
     }
     .hero-btns .btn-primary, .hero-btns .btn-secondary {
         width: 100%;
+        max-width: 320px; /* Comfortable mobile width */
         text-align: center;
-        padding: 16px;
+        padding: 18px;
+        font-size: 18px;
+        font-weight: 800;
+        border-radius: 12px;
+        box-shadow: 0 4px 0 rgba(0,0,0,0.1); /* Give it that 'Press' depth like reference */
+    }
+    .hero-btns .btn-primary {
+        background: var(--primary);
+        box-shadow: 0 6px 0 var(--primary-dark); /* 3D effect */
+    }
+    .hero-btns .btn-secondary {
+        background: var(--white);
+        border: 2px solid #cbd5e1;
+        box-shadow: 0 4px 0 #cbd5e1;
+    }
+    .trust-icons {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
     }
     .hero-img-box { padding-bottom: 40px; }
     .floating-card { 
