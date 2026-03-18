@@ -1033,22 +1033,22 @@ header {
     }
     .hero-btns .btn-primary, .hero-btns .btn-secondary {
         width: 100%;
-        max-width: 320px; /* Comfortable mobile width */
+        max-width: 280px; /* Sharper, slightly smaller mobile width */
         text-align: center;
-        padding: 18px;
-        font-size: 18px;
-        font-weight: 800;
-        border-radius: 12px;
-        box-shadow: 0 4px 0 rgba(0,0,0,0.1); /* Give it that 'Press' depth like reference */
+        padding: 14px; /* More standard mobile size */
+        font-size: 16px;
+        font-weight: 700;
+        border-radius: 4px; /* Sharp corners as requested */
+        box-shadow: 0 2px 0 rgba(0,0,0,0.05); 
     }
     .hero-btns .btn-primary {
         background: var(--primary);
-        box-shadow: 0 6px 0 var(--primary-dark); /* 3D effect */
+        box-shadow: 0 4px 0 var(--primary-dark); /* Subtle 3D effect */
     }
     .hero-btns .btn-secondary {
         background: var(--white);
         border: 2px solid #cbd5e1;
-        box-shadow: 0 4px 0 #cbd5e1;
+        box-shadow: 0 2px 0 #cbd5e1;
     }
     .trust-icons {
         display: flex;

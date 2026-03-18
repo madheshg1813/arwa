@@ -17,7 +17,7 @@ export default function Home() {
             <h1>Restore Your <span className="text-gradient">Confidence</span> with Custom Artificial Eyes.</h1>
             <p>Chennai’s leading center for high-quality, natural-looking artificial eyes. We help you look and feel your best with personalized care and advanced matching technology.</p>
             <div className="hero-btns">
-              <Link href="#services" className="btn-primary">Explore Services</Link>
+              <Link href="#services" className="btn-primary">Book Appointment Now</Link>
               <Link href="/contact" className="btn-secondary">Contact Us</Link>
             </div>
             <div className="trust-icons">
