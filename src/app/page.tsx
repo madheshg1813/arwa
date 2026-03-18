@@ -14,8 +14,8 @@ export default function Home() {
       <section id="home" className="hero">
         <div className="container hero-container">
           <div className="hero-text">
-            <h1>Expert Ocular <span className="text-gradient">Restoration</span> for a Life Reclaimed.</h1>
-            <p>Chennai’s premier center for bespoke ocular prosthetics. We combine world-class clinical artistry with advanced digital matching to restore your confidence and natural appearance.</p>
+            <h1>Restore Your <span className="text-gradient">Confidence</span> with Custom Artificial Eyes.</h1>
+            <p>Chennai’s leading center for high-quality, natural-looking artificial eyes. We help you look and feel your best with personalized care and advanced matching technology.</p>
             <div className="hero-btns">
               <Link href="#services" className="btn-primary">Explore Services</Link>
               <Link href="/contact" className="btn-secondary">Contact Us</Link>
@@ -51,17 +51,23 @@ export default function Home() {
       <section className="why-choose">
         <div className="container grid-3">
           <div className="feature-card">
-            <ion-icon name="shield-check-outline"></ion-icon>
+            <div className="feature-icon-box">
+              <ion-icon name="shield-checkmark-outline"></ion-icon>
+            </div>
             <h3>Medical Grade P.M.M.A</h3>
             <p>We use high-quality Polymethyl Methacrylate (P.M.M.A), ensuring unbreakable, durable, and biocompatible restorations that are non-reactive to body tissue.</p>
           </div>
           <div className="feature-card">
-            <ion-icon name="color-filter-outline"></ion-icon>
+            <div className="feature-icon-box">
+              <ion-icon name="scan-outline"></ion-icon>
+            </div>
             <h3>Bio-Matched Realism</h3>
             <p>Proprietary Digital Iris technology to capture natural patterns and achieve perfect color depth for the patient with one eye.</p>
           </div>
           <div className="feature-card">
-            <ion-icon name="sparkles-outline"></ion-icon>
+            <div className="feature-icon-box">
+              <ion-icon name="eye-outline"></ion-icon>
+            </div>
             <h3>Official Vision</h3>
             <p>"To provide quality services and highest standard of workmanship for every patient with one eye."</p>
           </div>
@@ -76,7 +82,7 @@ export default function Home() {
           </div>
           <div className="expertise-content">
             <span className="tag">Leading Technology</span>
-            <h2>The Art & Science <br />of True Realism</h2>
+            <h2>The Art & Science of True Realism</h2>
             <p>We don't just create a prosthesis; we meticulously recreate a part of you. By integrating high-definition digital scanning with traditional hand-painted techniques, we achieve a depth of color and anatomical accuracy that is indistinguishable from your natural eye.</p>
             <ul className="check-list">
               <li><ion-icon name="checkmark-done"></ion-icon> Precision Fit Measurement Techniques</li>
@@ -97,25 +103,33 @@ export default function Home() {
           </div>
           <div className="services-grid">
             <div className="service-card-premium">
-              <ion-icon name="eye"></ion-icon>
+              <div className="service-icon-box">
+                <ion-icon name="eye"></ion-icon> 
+              </div>
               <h3>Custom Ocular Prosthesis</h3>
               <p>Bespoke artificial eyes featuring hand-painted iris mapping. Prevents socket shrinkage, eliminates watering/discharge, and maximizes motility.</p>
               <Link href="/contact" className="link">Consult Specialist <ion-icon name="arrow-forward"></ion-icon></Link>
             </div>
             <div className="service-card-premium">
-              <ion-icon name="glasses"></ion-icon>
+              <div className="service-icon-box">
+                <ion-icon name="happy-outline"></ion-icon>
+              </div>
               <h3>Ptosis Crutch Solutions</h3>
               <p>Specialized ocular prosthesis designed to support drooping eyelids and restore natural symmetry.</p>
               <Link href="/contact" className="link">View Catalog <ion-icon name="arrow-forward"></ion-icon></Link>
             </div>
             <div className="service-card-premium">
-              <ion-icon name="layers"></ion-icon>
+              <div className="service-icon-box">
+                <ion-icon name="leaf-outline"></ion-icon>
+              </div>
               <h3>Scleral Shells</h3>
               <p>Ultra-thin aesthetic covers for phthisical or sensitive remaining eyes, tailored for zero irritation.</p>
               <Link href="/contact" className="link">Learn More <ion-icon name="arrow-forward"></ion-icon></Link>
             </div>
             <div className="service-card-premium">
-              <ion-icon name="cube"></ion-icon>
+              <div className="service-icon-box">
+                <ion-icon name="construct-outline"></ion-icon>
+              </div>
               <h3>Pressure Conformers</h3>
               <p>Intermediate restorations including socket expanders and motility pegs for post-surgical socket health.</p>
               <Link href="/contact" className="link">Get Assessment <ion-icon name="arrow-forward"></ion-icon></Link>
@@ -204,13 +218,4 @@ export default function Home() {
       <FloatingWhatsApp />
     </main>
   );
-}
-
-// Add types for Ionicons to avoid TS errors
-declare global {
-  namespace JSX {
-    interface IntrinsicElements {
-      "ion-icon": any;
-    }
-  }
 }

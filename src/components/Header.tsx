@@ -103,13 +103,3 @@ export default function Header() {
     </>
   );
 }
-
-// Add types for Ionicons to avoid TS errors
-declare global {
-  namespace JSX {
-    interface IntrinsicElements {
-      "ion-icon": any;
-    }
-  }
-}
-
