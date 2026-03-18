@@ -8,7 +8,7 @@ export default function Footer() {
           <span className="f-logo">ARWA</span>
           <p>
             India’s leading clinical center specializing in hyper-realistic
-            ocular prosthetics and specialized optical solutions. Restoring
+            ocular prosthetics and specialized clinical solutions. Restoring
             vision, confidence, and quality of life.
           </p>
           <div className="f-socials">
@@ -49,7 +49,7 @@ export default function Footer() {
       </div>
       <div className="footer-bottom">
         <div className="container">
-          <p>&copy; 2026 ARWA Optics & Prosthetic Center. All rights reserved.</p>
+          <p>&copy; 2026 ARWA Prosthetic Center. All rights reserved.</p>
         </div>
       </div>
     </footer>

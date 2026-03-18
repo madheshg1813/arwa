@@ -43,10 +43,10 @@ export default function Header() {
           <nav className="navbar">
             <div className="logo">
               <Link href="/" className="logo-link" style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
-                <img src="/logo.jpeg" alt="ARWA Logo" className="logo-img" />
+                <img src="/logo.png" alt="ARWA Logo" className="logo-img" />
                 <div className="logo-text">
                   <span className="brand-name">ARWA</span>
-                  <span className="brand-sub">Optics & Prosthetic Center</span>
+                  <span className="brand-sub">Prosthetic Center</span>
                 </div>
               </Link>
             </div>
@@ -69,7 +69,7 @@ export default function Header() {
         <div className={`mobile-menu ${isMenuOpen ? "active" : ""}`}>
           <div className="mobile-menu-header">
             <div className="logo">
-              <img src="/logo.jpeg" alt="ARWA Logo" className="logo-img" />
+              <img src="/logo.png" alt="ARWA Logo" className="logo-img" />
               <span className="brand-name">ARWA CENTER</span>
             </div>
             <ion-icon name="close-outline" id="mobile-close" onClick={toggleMenu}></ion-icon>
