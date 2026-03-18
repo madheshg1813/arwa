@@ -98,21 +98,22 @@ ul { list-style: none; }
 }
 
 .btn-secondary {
-    background: var(--white);
-    color: var(--text-main);
+    background: #f8fafc; /* Subtle light background for better visibility */
+    color: var(--primary-dark);
     padding: 14px 28px;
     border-radius: var(--radius-btn);
-    font-weight: 600;
+    font-weight: 700;
     font-size: 16px;
     display: inline-block;
-    border: 1px solid #E5E7EB; /* Lighter professional border */
+    border: 2px solid #cbd5e1; /* Thicker, more visible border */
     cursor: pointer;
     transition: var(--transition);
 }
 
 .btn-secondary:hover {
-    background: #F9FAFB;
-    border-color: #D1D5DB;
+    background: var(--white);
+    border-color: var(--primary);
+    color: var(--primary);
 }
 
 .hero-btns {
