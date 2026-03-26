@@ -98,43 +98,187 @@ export default function Home() {
         <div className="container">
           <div className="section-header">
             <span className="tag">Specialized Care</span>
-            <h2>Clinical Ocular Solutions</h2>
-            <p>Precision-engineered restorations tailored to each patient's unique anatomical requirements.</p>
+            <h2>Our Complete Range of Services</h2>
+            <p>Precision-engineered solutions tailored to each patient&apos;s unique clinical and anatomical requirements.</p>
           </div>
-          <div className="services-grid">
-            <div className="service-card-premium">
-              <div className="service-icon-box">
-                <ion-icon name="eye"></ion-icon> 
+
+          {/* Category 1: Opticals */}
+          <div className="service-category">
+            <div className="category-label">
+              <div className="category-icon-wrap" style={{ background: "var(--primary-light)", color: "var(--primary)" }}>
+                <ion-icon name="glasses-outline"></ion-icon>
               </div>
-              <h3>Custom Ocular Prosthesis</h3>
-              <p>Bespoke artificial eyes featuring hand-painted iris mapping. Prevents socket shrinkage, eliminates watering/discharge, and maximizes motility.</p>
-              <Link href="/contact" className="link">Consult Specialist <ion-icon name="arrow-forward"></ion-icon></Link>
+              <div>
+                <h3>Opticals &amp; Special Medical Lens Manufacturing</h3>
+                <p>Advanced optical solutions for complex vision conditions</p>
+              </div>
             </div>
-            <div className="service-card-premium">
-              <div className="service-icon-box">
-                <ion-icon name="happy-outline"></ion-icon>
+            <div className="services-grid services-grid-3">
+              <div className="service-card-premium">
+                <div className="service-icon-box"><ion-icon name="glasses"></ion-icon></div>
+                <h3>Crutch Glasses (Ptosis Support)</h3>
+                <p>Specially fabricated glasses with crutch attachments to lift and support drooping eyelids, restoring normal field of vision.</p>
+                <Link href="/contact" className="link">Consult Now <ion-icon name="arrow-forward"></ion-icon></Link>
               </div>
-              <h3>Ptosis Crutch Solutions</h3>
-              <p>Specialized ocular prosthesis designed to support drooping eyelids and restore natural symmetry.</p>
-              <Link href="/contact" className="link">View Catalog <ion-icon name="arrow-forward"></ion-icon></Link>
-            </div>
-            <div className="service-card-premium">
-              <div className="service-icon-box">
-                <ion-icon name="leaf-outline"></ion-icon>
+              <div className="service-card-premium">
+                <div className="service-icon-box"><ion-icon name="aperture-outline"></ion-icon></div>
+                <h3>Keratoconus Lenses</h3>
+                <p>Custom-designed contact lenses to correct the irregular corneal shape caused by keratoconus, improving visual clarity.</p>
+                <Link href="/contact" className="link">Learn More <ion-icon name="arrow-forward"></ion-icon></Link>
               </div>
-              <h3>Scleral Shells</h3>
-              <p>Ultra-thin aesthetic covers for phthisical or sensitive remaining eyes, tailored for zero irritation.</p>
-              <Link href="/contact" className="link">Learn More <ion-icon name="arrow-forward"></ion-icon></Link>
-            </div>
-            <div className="service-card-premium">
-              <div className="service-icon-box">
-                <ion-icon name="construct-outline"></ion-icon>
+              <div className="service-card-premium">
+                <div className="service-icon-box"><ion-icon name="moon-outline"></ion-icon></div>
+                <h3>Orthokeratology / Ortho-K Lens</h3>
+                <p>Overnight specially designed rigid lenses that gently reshape the cornea to correct myopia and reduce dependence on glasses.</p>
+                <Link href="/contact" className="link">Learn More <ion-icon name="arrow-forward"></ion-icon></Link>
               </div>
-              <h3>Pressure Conformers</h3>
-              <p>Intermediate restorations including socket expanders and motility pegs for post-surgical socket health.</p>
-              <Link href="/contact" className="link">Get Assessment <ion-icon name="arrow-forward"></ion-icon></Link>
+              <div className="service-card-premium">
+                <div className="service-icon-box"><ion-icon name="radio-button-on-outline"></ion-icon></div>
+                <h3>Scleral Contact Lens</h3>
+                <p>Large-diameter gas-permeable lenses that vault the cornea and rest on the sclera, ideal for irregular corneas and dry eye conditions.</p>
+                <Link href="/contact" className="link">Get Assessment <ion-icon name="arrow-forward"></ion-icon></Link>
+              </div>
+              <div className="service-card-premium">
+                <div className="service-icon-box"><ion-icon name="flower-outline"></ion-icon></div>
+                <h3>Rose K Lens</h3>
+                <p>The globally recognised gold standard rigid gas-permeable lens system specifically designed for keratoconus patients.</p>
+                <Link href="/contact" className="link">Get Assessment <ion-icon name="arrow-forward"></ion-icon></Link>
+              </div>
+              <div className="service-card-premium">
+                <div className="service-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                <h3>Prosthetic Soft &amp; Hard Contact Lens</h3>
+                <p>Custom-tinted prosthetic lenses in both soft and rigid materials to cosmetically mask disfigured or blind eyes.</p>
+                <Link href="/contact" className="link">View Options <ion-icon name="arrow-forward"></ion-icon></Link>
+              </div>
             </div>
           </div>
+
+          {/* Category 2: Oculoplasty */}
+          <div className="service-category">
+            <div className="category-label">
+              <div className="category-icon-wrap" style={{ background: "#FFF4E8", color: "var(--accent-orange)" }}>
+                <ion-icon name="medkit-outline"></ion-icon>
+              </div>
+              <div>
+                <h3>Oculoplasty &amp; Eye Specialist</h3>
+                <p>Specialized management of complex eye conditions and socket rehabilitation</p>
+              </div>
+            </div>
+            <div className="services-grid services-grid-3">
+              <div className="service-card-premium">
+                <div className="service-icon-box"><ion-icon name="medical-outline"></ion-icon></div>
+                <h3>Oculoplasty Eye Specialist</h3>
+                <p>Expert oculoplastic consultation and prosthetic fitting for patients requiring eyelid, orbit, and lacrimal system restoration.</p>
+                <Link href="/contact" className="link">Book Consultation <ion-icon name="arrow-forward"></ion-icon></Link>
+              </div>
+              <div className="service-card-premium">
+                <div className="service-icon-box"><ion-icon name="resize-outline"></ion-icon></div>
+                <h3>Microphthalmia Management</h3>
+                <p>Comprehensive management for underdeveloped small eyes, including custom conformers and prostheses to promote socket growth.</p>
+                <Link href="/contact" className="link">Learn More <ion-icon name="arrow-forward"></ion-icon></Link>
+              </div>
+              <div className="service-card-premium">
+                <div className="service-icon-box"><ion-icon name="contract-outline"></ion-icon></div>
+                <h3>Contracted Eye Management</h3>
+                <p>Specialised treatment for contracted or shrunken eye sockets using progressive conformers to restore volume and prepare for prosthesis fitting.</p>
+                <Link href="/contact" className="link">Get Assessment <ion-icon name="arrow-forward"></ion-icon></Link>
+              </div>
+            </div>
+          </div>
+
+          {/* Category 3: Ocular & Orbital Prosthesis */}
+          <div className="service-category">
+            <div className="category-label">
+              <div className="category-icon-wrap" style={{ background: "#EAF7EC", color: "var(--accent-green)" }}>
+                <ion-icon name="eye-outline"></ion-icon>
+              </div>
+              <div>
+                <h3>Ocular &amp; Orbital Prosthesis</h3>
+                <p>Hyper-realistic custom prosthetic eyes and shells with bio-matched detail</p>
+              </div>
+            </div>
+            <div className="services-grid services-grid-3">
+              <div className="service-card-premium">
+                <div className="service-icon-box"><ion-icon name="eye"></ion-icon></div>
+                <h3>Ocular Prosthesis</h3>
+                <p>Bespoke custom artificial eyes with hand-painted iris mapping. Prevents socket shrinkage, eliminates discharge, and maximises natural motility.</p>
+                <Link href="/contact" className="link">Consult Specialist <ion-icon name="arrow-forward"></ion-icon></Link>
+              </div>
+              <div className="service-card-premium">
+                <div className="service-icon-box"><ion-icon name="cube-outline"></ion-icon></div>
+                <h3>Orbital Prosthesis</h3>
+                <p>Custom orbital prostheses for patients who have undergone exenteration, restoring facial symmetry and supporting quality of life.</p>
+                <Link href="/contact" className="link">Learn More <ion-icon name="arrow-forward"></ion-icon></Link>
+              </div>
+              <div className="service-card-premium">
+                <div className="service-icon-box"><ion-icon name="layers"></ion-icon></div>
+                <h3>Scleral Shell</h3>
+                <p>Ultra-thin scleral prosthetic shells placed over a shrunken or disfigured eye, providing a natural aesthetic with zero irritation.</p>
+                <Link href="/contact" className="link">View Options <ion-icon name="arrow-forward"></ion-icon></Link>
+              </div>
+            </div>
+          </div>
+
+          {/* Category 4: Low Vision */}
+          <div className="service-category">
+            <div className="category-label">
+              <div className="category-icon-wrap" style={{ background: "#F0EAFF", color: "#7C3AED" }}>
+                <ion-icon name="accessibility-outline"></ion-icon>
+              </div>
+              <div>
+                <h3>Low Vision &amp; Blind Eye Devices</h3>
+                <p>Assistive devices to maximise remaining vision and independence</p>
+              </div>
+            </div>
+            <div className="services-grid services-grid-2">
+              <div className="service-card-premium">
+                <div className="service-icon-box"><ion-icon name="telescope-outline"></ion-icon></div>
+                <h3>Low Vision Devices</h3>
+                <p>Optical and electronic magnification aids — including magnifiers, telescopic systems, and electronic devices — tailored for patients with partial sight.</p>
+                <Link href="/contact" className="link">Explore Devices <ion-icon name="arrow-forward"></ion-icon></Link>
+              </div>
+              <div className="service-card-premium">
+                <div className="service-icon-box"><ion-icon name="eye-off-outline"></ion-icon></div>
+                <h3>Blind Eye Devices</h3>
+                <p>Specialist aids and prosthetic solutions for patients with complete vision loss, focused on comfort, cosmesis, and quality of life.</p>
+                <Link href="/contact" className="link">Learn More <ion-icon name="arrow-forward"></ion-icon></Link>
+              </div>
+            </div>
+          </div>
+
+          {/* Category 5: Facial & Maxillofacial */}
+          <div className="service-category">
+            <div className="category-label">
+              <div className="category-icon-wrap" style={{ background: "#FFF0F0", color: "var(--accent-red)" }}>
+                <ion-icon name="person-outline"></ion-icon>
+              </div>
+              <div>
+                <h3>Facial &amp; Maxillofacial Prosthesis</h3>
+                <p>Lifelike prosthetic restorations for facial features and structures</p>
+              </div>
+            </div>
+            <div className="services-grid services-grid-3">
+              <div className="service-card-premium">
+                <div className="service-icon-box"><ion-icon name="ear-outline"></ion-icon></div>
+                <h3>Auricular Prosthesis</h3>
+                <p>Custom silicone ear prostheses for patients with congenital absence or surgical loss of the ear, matched precisely to the contralateral ear.</p>
+                <Link href="/contact" className="link">Consult Now <ion-icon name="arrow-forward"></ion-icon></Link>
+              </div>
+              <div className="service-card-premium">
+                <div className="service-icon-box"><ion-icon name="happy-outline"></ion-icon></div>
+                <h3>Nasal Prosthesis</h3>
+                <p>Realistic silicone nasal restorations fabricated for patients following rhinectomy or trauma, restoring facial harmony and confidence.</p>
+                <Link href="/contact" className="link">Learn More <ion-icon name="arrow-forward"></ion-icon></Link>
+              </div>
+              <div className="service-card-premium">
+                <div className="service-icon-box"><ion-icon name="person"></ion-icon></div>
+                <h3>Facial Prosthesis</h3>
+                <p>Comprehensive custom facial prosthetics for complex facial defects, blending seamlessly with natural skin tone and texture.</p>
+                <Link href="/contact" className="link">Get Assessment <ion-icon name="arrow-forward"></ion-icon></Link>
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
 
@@ -201,10 +345,37 @@ export default function Home() {
               <form>
                 <input type="text" placeholder="Your Name" required />
                 <input type="email" placeholder="Your Email" required />
-                <select>
-                  <option>Custom Prosthesis</option>
-                  <option>Optical Services</option>
-                  <option>Consultation</option>
+                <select defaultValue="">
+                  <option value="" disabled>Select a Service</option>
+                  <optgroup label="Opticals &amp; Special Medical Lenses">
+                    <option>Crutch Glasses (Ptosis Support)</option>
+                    <option>Keratoconus Lenses</option>
+                    <option>Orthokeratology / Ortho-K Lens</option>
+                    <option>Scleral Contact Lens</option>
+                    <option>Rose K Lens</option>
+                    <option>Prosthetic Soft &amp; Hard Contact Lens</option>
+                  </optgroup>
+                  <optgroup label="Oculoplasty &amp; Eye Management">
+                    <option>Oculoplasty Eye Specialist</option>
+                    <option>Microphthalmia Management</option>
+                    <option>Contracted Eye Management</option>
+                  </optgroup>
+                  <optgroup label="Ocular &amp; Orbital Prosthesis">
+                    <option>Ocular Prosthesis</option>
+                    <option>Orbital Prosthesis</option>
+                    <option>Scleral Shell</option>
+                  </optgroup>
+                  <optgroup label="Low Vision &amp; Blind Eye Devices">
+                    <option>Low Vision Devices</option>
+                    <option>Blind Eye Devices</option>
+                  </optgroup>
+                  <optgroup label="Facial &amp; Maxillofacial Prosthesis">
+                    <option>Auricular Prosthesis</option>
+                    <option>Nasal Prosthesis</option>
+                    <option>Facial Prosthesis</option>
+                    <option>Maxillofacial Prosthesis</option>
+                  </optgroup>
+                  <option>General Consultation</option>
                 </select>
                 <textarea placeholder="Tell us about your requirements..." rows={4}></textarea>
                 <button type="submit" className="btn-submit">Submit Inquiry</button>

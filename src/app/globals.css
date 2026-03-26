@@ -388,20 +388,22 @@ header {
 .check-list li ion-icon { color: var(--accent-green); font-size: 1.5rem; }
 
 /* Services */
-.services { padding: 80px 0; }
-.section-header { text-align: center; margin-bottom: 48px; }
-.section-header h2 { 
-    font-size: 2.8rem; 
+.services { padding: 60px 0; }
+.section-header { text-align: center; margin-bottom: 40px; }
+.section-header h2 {
+    font-size: 2.2rem;
     font-weight: 800;
-    margin-bottom: 12px; 
-    letter-spacing: -1.2px;
+    margin-bottom: 8px;
+    letter-spacing: -0.8px;
 }
+.section-header p { font-size: 0.95rem; color: var(--text-muted); }
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Force 4 columns on desktop */
-    gap: 24px; /* Slightly tighter gap like BoldDesk */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
 }
+.services-grid-3, .services-grid-2 { gap: 16px; }
 
 @media (max-width: 1100px) {
     .services-grid {
@@ -416,7 +418,7 @@ header {
 }
 
 .service-card-premium {
-    padding: 32px; /* Balanced padding */
+    padding: 22px 24px;
     border-radius: var(--radius-md);
     background: var(--white);
     box-shadow: var(--shadow-soft);
@@ -428,38 +430,78 @@ header {
 }
 
 .service-card-premium:hover {
-    border-color: var(--primary-light);
-    transform: translateY(-8px);
+    border-color: var(--primary);
+    transform: translateY(-4px);
     box-shadow: var(--shadow-strong);
 }
 
 .service-card-premium .service-icon-box {
-    width: 64px;
-    height: 64px;
-    background: var(--bg-soft);
+    width: 40px;
+    height: 40px;
+    background: var(--primary-light);
     color: var(--primary);
-    border-radius: var(--radius-btn);
+    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 24px;
+    margin-bottom: 14px;
+    flex-shrink: 0;
 }
 
 .service-card-premium .service-icon-box ion-icon {
-    font-size: 32px;
+    font-size: 20px;
     margin-bottom: 0;
 }
 
-.service-card-premium h3 { font-size: 1.8rem; font-weight: 800; margin-bottom: 16px; }
-.service-card-premium p { color: var(--text-muted); margin-bottom: 24px; }
+.service-card-premium h3 { font-size: 1rem; font-weight: 700; margin-bottom: 8px; line-height: 1.3; }
+.service-card-premium p { color: var(--text-muted); margin-bottom: 14px; font-size: 0.875rem; line-height: 1.6; flex: 1; }
 .service-card-premium .link {
-    font-weight: 700;
+    font-weight: 600;
+    font-size: 0.85rem;
     color: var(--primary);
     display: flex;
     align-items: center;
     gap: 8px;
     margin-top: auto; /* Push to bottom for uniform alignment */
     padding-top: 20px;
+}
+
+/* Service Categories */
+.service-category { margin-bottom: 48px; }
+.service-category:last-child { margin-bottom: 0; }
+
+.category-label {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e2e8f0;
+}
+.category-icon-wrap {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+}
+.category-label h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 2px; }
+.category-label > div > p { color: var(--text-muted); font-size: 0.82rem; margin: 0; }
+
+.services-grid-3 { grid-template-columns: repeat(3, 1fr); }
+.services-grid-2 { grid-template-columns: repeat(2, 1fr); }
+.service-card-wide { grid-column: span 2; }
+
+@media (max-width: 900px) {
+    .services-grid-3 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+    .services-grid-3, .services-grid-2 { grid-template-columns: 1fr; }
+    .service-card-wide { grid-column: span 1; }
+    .category-label { flex-direction: column; align-items: flex-start; }
 }
 
 /* Care Section */
@@ -1002,9 +1044,9 @@ header {
     .flex-center { flex-direction: column; gap: 60px; }
     .expertise-content h2, .section-header h2 { font-size: 2.2rem; margin-bottom: 16px; }
     .expertise-content p { font-size: 1rem; }
-    .contact-grid-v3, .contact-box { 
+    .contact-grid-v3, .contact-box {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 0;
     }
     .care-container { flex-direction: column; }
     .grid-3 { grid-template-columns: 1fr; }
@@ -1062,9 +1104,15 @@ header {
     .floating-card { 
         display: none; 
     }
-    .contact-info-card, .service-card-premium {
-        padding: 30px 20px;
+    .contact-info-card {
+        padding: 24px 16px;
     }
+    .service-card-premium {
+        padding: 20px 16px;
+    }
+    .contact-form-container { padding: 24px 16px; }
+    .form-header { margin-bottom: 20px; }
+    .form-header h2 { font-size: 1.5rem; }
     .main-contact-form {
         grid-template-columns: 1fr;
     }
@@ -1075,13 +1123,43 @@ header {
     .footer-grid { grid-template-columns: 1fr; gap: 50px; }
     
     /* Alignment Fixes */
-    .care-text, .contact-info-new, .contact-form-new {
-        padding: 40px 15px;
+    .care-text {
+        padding: 40px 24px;
     }
-    .care-text h2, .contact-info-new h3 {
+    .care-text h2 {
         font-size: 1.8rem;
         word-wrap: break-word;
     }
+
+    /* Contact Mobile */
+    .contact-v2 { padding: 40px 0; }
+    .contact-v2 .container { padding: 0 16px; }
+    .contact-box {
+        border-radius: 12px;
+        box-shadow: none;
+        width: 100%;
+    }
+    .contact-info-new {
+        padding: 28px 16px;
+        border-radius: 0;
+    }
+    .contact-info-new h3 {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+    }
+    .contact-info-new > p { font-size: 0.9rem; margin-bottom: 20px; }
+    .contact-links { margin: 16px 0; }
+    .c-link { gap: 10px; margin-bottom: 14px; font-size: 0.88rem; }
+    .btn-whatsapp-v2 { padding: 12px 20px; font-size: 0.9rem; }
+    .contact-form-new { padding: 24px 16px; }
+    .contact-form-new input,
+    .contact-form-new select,
+    .contact-form-new textarea {
+        padding: 13px 14px;
+        font-size: 0.9rem;
+        border-radius: 8px;
+    }
+    .btn-submit { padding: 14px; font-size: 0.95rem; border-radius: 8px; }
     .step {
         gap: 15px;
     }
@@ -1093,9 +1171,11 @@ header {
     .c-link {
         font-size: 0.9rem;
     }
-    .contact-grid-v3 {
-        padding: 0 5px;
+    .contact-page-content .container {
+        padding: 0 16px;
     }
+    .contact-page-content { padding: 40px 0; }
+    .contact-grid-v3 { gap: 0; }
     
     /* Map Section Fixes */
     .map-overlay {
