@@ -2,12 +2,34 @@ import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import Faq from "@/components/Faq";
 import Link from "next/link";
+
+const faqs = [
+  { q: "What qualifications does ARWA's prosthetic doctor have?", a: "Our lead specialist is a certified ocularist with over 6 years of clinical experience in ocular prosthesis, facial prosthetics, and specialised optical solutions. The center is an authorised prosthetic clinic in Chennai." },
+  { q: "What conditions does the prosthetic doctor treat?", a: "Our specialist treats a wide range of conditions including anophthalmia, microphthalmia, phthisis bulbi, keratoconus, contracted eye sockets, and post-surgical facial defects requiring prosthetic rehabilitation." },
+  { q: "Is a referral needed to see the prosthetic doctor in Chennai?", a: "No referral is required. You can book a direct consultation by calling or WhatsApping +91 7200559344. Walk-in appointments are also welcome during working hours (Mon–Sat, 10 AM–7 PM)." },
+  { q: "What is the difference between an ocularist and an ophthalmologist?", a: "An ophthalmologist is a medical doctor who treats eye diseases and performs surgery. An ocularist is a specialist who designs, fabricates, and fits ocular prostheses (artificial eyes). Our doctor specialises in prosthetics and optical rehabilitation." },
+  { q: "Can the prosthetic doctor help with keratoconus lenses?", a: "Yes. Our specialist fits Rose K, Scleral, and Ortho-K lenses specifically designed for keratoconus patients — providing clearer vision and better comfort than standard contact lenses." },
+  { q: "How many appointments are needed for a prosthetic eye?", a: "Typically 2–3 appointments are required: an initial assessment, a fitting session, and a follow-up for adjustments. The full process usually takes around one week from start to completion." },
+];
 
 export const metadata: Metadata = {
   title: "Prosthetic Doctor in Chennai | ARWA Optics & Prosthetic Center",
-  description: "Consult a specialist prosthetic doctor in Chennai at ARWA Optics & Prosthetic Center. Expert in ocular prosthesis, facial prosthetics, scleral lenses & oculoplasty. Book now.",
-  keywords: "prosthetic doctor chennai, ocularist chennai, prosthetic eye doctor chennai, oculoplasty specialist chennai",
+  description: "Consult a certified prosthetic doctor in Chennai at ARWA Optics & Prosthetic Center. Expert in ocular prosthesis, facial prosthetics, scleral lenses & oculoplasty. Book a consultation today.",
+  keywords: "prosthetic doctor chennai, ocularist chennai, prosthetic eye doctor chennai, oculoplasty specialist chennai, artificial eye doctor chennai",
+  robots: { index: true, follow: true },
+  openGraph: {
+    title: "Prosthetic Doctor in Chennai | ARWA Optics & Prosthetic Center",
+    description: "Meet Chennai's certified prosthetic doctor — expert in ocular prosthesis, oculoplasty, scleral lenses & facial prosthetics. Book your confidential consultation.",
+    images: [{ url: "/advanced_diagnostic_eye.png", width: 1200, height: 630, alt: "Prosthetic Doctor Chennai" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Prosthetic Doctor in Chennai | ARWA Center",
+    description: "Certified ocularist & prosthetic specialist in Chennai. Expert in ocular prosthesis & facial prosthetics.",
+    images: ["/advanced_diagnostic_eye.png"],
+  },
 };
 
 export default function ProstheticDoctorChennai() {
@@ -117,6 +139,8 @@ export default function ProstheticDoctorChennai() {
           </div>
         </div>
       </section>
+
+      <Faq items={faqs} city="Chennai" mapQuery="Kamarajapuram, Chennai, Tamil Nadu" mapLink="https://maps.google.com/?q=Kamarajapuram,Chennai,Tamil+Nadu" />
 
       {/* CTA */}
       <section className="lp-cta">

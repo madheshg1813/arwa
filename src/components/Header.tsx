@@ -83,9 +83,7 @@ export default function Header() {
                   </li>
                 </ul>
               </li>
-              <li><Link href="/#expertise">Technology</Link></li>
               <li><Link href="/#care">Care Guide</Link></li>
-              <li><Link href="/contact">Contact</Link></li>
               <li><Link href="/contact" className="btn-cta">Consult Now</Link></li>
             </ul>
             <div className="mobile-menu-btn" onClick={toggleMenu}>
@@ -106,6 +104,7 @@ export default function Header() {
           <div className="mobile-menu-body">
             <p className="m-mission">Restoring confidence and vision through precision ocular prosthetics.</p>
             <ul className="mobile-nav-links">
+              <li><Link href="/" onClick={toggleMenu}><ion-icon name="home-outline"></ion-icon> Home</Link></li>
               <li>
                 <button className="m-dropdown-btn" onClick={() => setCityOpen(!cityOpen)}>
                   <span><ion-icon name="medical-outline"></ion-icon> Services</span>
@@ -114,9 +113,9 @@ export default function Header() {
                 {cityOpen && (
                   <ul className="m-dropdown-list">
                     <li className="m-dropdown-label">Prosthetic Clinic in Chennai</li>
-                    {cityLinks.slice(1).map((c) => (
+                    {cityLinks.map((c) => (
                       <li key={c.href}>
-                        <Link href={c.href} onClick={toggleMenu}>
+                        <Link href={c.href} onClick={() => { toggleMenu(); setCityOpen(false); }}>
                           <ion-icon name="location-outline"></ion-icon>
                           {c.name.replace("Prosthetic Clinic — ", "")}
                         </Link>
@@ -125,9 +124,8 @@ export default function Header() {
                   </ul>
                 )}
               </li>
-              <li><Link href="/#expertise" onClick={toggleMenu}><ion-icon name="flask-outline"></ion-icon> Clinical Technology</Link></li>
-              <li><Link href="/#care" onClick={toggleMenu}><ion-icon name="heart-outline"></ion-icon> Maintenance Guide</Link></li>
-              <li><Link href="/contact" onClick={toggleMenu}><ion-icon name="mail-outline"></ion-icon> Official Consultation</Link></li>
+              <li><Link href="/#care" onClick={toggleMenu}><ion-icon name="heart-outline"></ion-icon> Care Guide</Link></li>
+              <li><Link href="/contact" onClick={toggleMenu} className="m-cta-btn"><ion-icon name="calendar-outline"></ion-icon> Consult Now</Link></li>
             </ul>
             
             <div className="m-social-box">

@@ -2,12 +2,36 @@ import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import Faq from "@/components/Faq";
+import AreasServed from "@/components/AreasServed";
 import Link from "next/link";
+
+const faqs = [
+  { q: "What services does ARWA Prosthetic Clinic in Chennai offer?", a: "ARWA offers a full range of prosthetic and optical services including custom ocular prosthesis, orbital prosthesis, scleral shells, scleral contact lenses, Rose K lenses, Ortho-K lenses, keratoconus management, facial prosthetics (ear, nose, face), low vision devices, and oculoplasty rehabilitation." },
+  { q: "Where is ARWA Prosthetic Clinic located in Chennai?", a: "We are located at No 2, Usman Street, Mosque Colony, Kamarajapuram, Chennai — 600072. Easily accessible from all major areas of South Chennai including Tambaram, Chrompet, Pallavaram, and Medavakkam." },
+  { q: "How do I book an appointment at the prosthetic clinic?", a: "You can book an appointment by calling us at +91 7200559344, WhatsApping us, or filling out the contact form on our website. We are open Monday to Saturday, 10:00 AM – 7:00 PM." },
+  { q: "How long does it take to make a custom ocular prosthesis?", a: "A custom ocular prosthesis typically takes 3–5 working days to fabricate after the initial fitting and impression. Follow-up adjustments are also provided to ensure the perfect fit and comfort." },
+  { q: "Is the prosthetic eye made of safe materials?", a: "Yes. All our prosthetic eyes are fabricated using medical-grade Polymethyl Methacrylate (PMMA) — a biocompatible material that is non-reactive to body tissue, durable, and safe for long-term wear." },
+  { q: "Do you offer facial prosthetics like ear and nose prosthetics?", a: "Yes. We specialise in auricular (ear), nasal (nose), and full facial prosthetics fabricated from medical-grade silicone, carefully pigmented to match your natural skin tone and texture." },
+  { q: "What is the cost of an ocular prosthesis in Chennai?", a: "The cost varies based on the type and complexity of the prosthesis. Please contact us directly for a personalised quote after a clinical assessment. We strive to make our services accessible to all patients." },
+];
 
 export const metadata: Metadata = {
   title: "Prosthetic Clinic in Chennai | ARWA Optics & Prosthetic Center",
-  description: "Looking for a trusted prosthetic clinic in Chennai? ARWA Optics & Prosthetic Center offers ocular prosthesis, scleral lenses, facial prosthetics & more. Visit us in Kamarajapuram, Chennai.",
-  keywords: "prosthetic clinic chennai, ocular prosthesis chennai, artificial eye clinic chennai, prosthetic eye chennai",
+  description: "Looking for a trusted prosthetic clinic in Chennai? ARWA Optics & Prosthetic Center offers custom ocular prosthesis, scleral lenses, facial prosthetics & more at Kamarajapuram, Chennai.",
+  keywords: "prosthetic clinic chennai, ocular prosthesis chennai, artificial eye clinic chennai, prosthetic eye chennai, scleral lens chennai, facial prosthetics chennai",
+  robots: { index: true, follow: true },
+  openGraph: {
+    title: "Prosthetic Clinic in Chennai | ARWA Optics & Prosthetic Center",
+    description: "Chennai's most trusted prosthetic clinic — custom ocular prosthesis, scleral lenses, facial prosthetics & low vision devices. Certified specialists.",
+    images: [{ url: "/ocularist_work_1773675138301.png", width: 1200, height: 630, alt: "Prosthetic Clinic Chennai" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Prosthetic Clinic in Chennai | ARWA Center",
+    description: "Custom ocular prosthesis, scleral lenses, facial prosthetics in Chennai.",
+    images: ["/ocularist_work_1773675138301.png"],
+  },
 };
 
 const clusters = [
@@ -125,6 +149,8 @@ export default function ProstheticClinicChennai() {
         </div>
       </section>
 
+      <Faq items={faqs} city="Kamarajapuram, Chennai" mapQuery="Kamarajapuram, Chennai, Tamil Nadu" mapLink="https://maps.google.com/?q=Kamarajapuram,Chennai,Tamil+Nadu" />
+
       {/* CTA */}
       <section className="lp-cta">
         <div className="container">
@@ -141,6 +167,7 @@ export default function ProstheticClinicChennai() {
         </div>
       </section>
 
+      <AreasServed />
       <Footer />
       <FloatingWhatsApp />
     </main>

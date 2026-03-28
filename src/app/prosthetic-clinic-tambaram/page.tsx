@@ -2,12 +2,35 @@ import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import Faq from "@/components/Faq";
+import AreasServed from "@/components/AreasServed";
 import Link from "next/link";
+
+const faqs = [
+  { q: "Is ARWA Prosthetic Clinic accessible from Tambaram?", a: "Yes. Our clinic is located at Kamarajapuram, Chennai, which is easily reachable from Tambaram via GST Road and well-connected local transport routes. The journey typically takes 20–30 minutes." },
+  { q: "What prosthetic services are available near Tambaram?", a: "Tambaram patients can access our full range of services including custom ocular prosthesis, scleral shells, scleral contact lenses, Rose K lenses, Ortho-K, keratoconus management, facial prosthetics, and low vision devices." },
+  { q: "How do I book an appointment from Tambaram?", a: "Simply call or WhatsApp us at +91 7200559344 to schedule a convenient appointment. We are open Monday to Saturday, 10:00 AM – 7:00 PM." },
+  { q: "How long does a first consultation take?", a: "The initial consultation typically lasts 30–60 minutes. Our specialist will assess your condition, discuss treatment options, and guide you through the next steps for your prosthetic or optical solution." },
+  { q: "Do you offer scleral and Rose K lenses for keratoconus near Tambaram?", a: "Yes. We fit a full range of specialist lenses for keratoconus patients including Rose K, Scleral, and Ortho-K lenses — available to patients travelling from Tambaram and surrounding areas." },
+  { q: "Is there parking available at the clinic?", a: "Yes, parking is available near our Kamarajapuram clinic. The location is also well-served by public transport for patients travelling from Tambaram by bus or auto." },
+];
 
 export const metadata: Metadata = {
   title: "Prosthetic Clinic Near Tambaram | ARWA Optics & Prosthetic Center",
-  description: "Searching for a prosthetic clinic near Tambaram, Chennai? ARWA Optics & Prosthetic Center is just minutes away — offering custom ocular prosthesis, scleral lenses & facial prosthetics.",
-  keywords: "prosthetic clinic tambaram, artificial eye tambaram, ocular prosthesis near tambaram chennai",
+  description: "Searching for a prosthetic clinic near Tambaram? ARWA Optics & Prosthetic Center in Chennai is easily accessible from Tambaram — custom ocular prosthesis, scleral lenses & facial prosthetics.",
+  keywords: "prosthetic clinic tambaram, artificial eye tambaram, ocular prosthesis near tambaram, prosthetic clinic near tambaram chennai",
+  robots: { index: true, follow: true },
+  openGraph: {
+    title: "Prosthetic Clinic Near Tambaram | ARWA Optics & Prosthetic Center",
+    description: "Easily accessible from Tambaram — ARWA offers custom ocular prosthesis, scleral lenses & facial prosthetics in Chennai.",
+    images: [{ url: "/ocularist_work_1773675138301.png", width: 1200, height: 630, alt: "Prosthetic Clinic Near Tambaram" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Prosthetic Clinic Near Tambaram | ARWA Center",
+    description: "Custom prosthetic clinic near Tambaram, Chennai. Expert ocular prosthesis & scleral lenses.",
+    images: ["/ocularist_work_1773675138301.png"],
+  },
 };
 
 export default function ProstheticClinicTambaram() {
@@ -97,6 +120,8 @@ export default function ProstheticClinicTambaram() {
         </div>
       </section>
 
+      <Faq items={faqs} city="Tambaram" mapQuery="Tambaram, Chennai, Tamil Nadu" mapLink="https://maps.google.com/?q=Tambaram,Chennai,Tamil+Nadu" />
+
       {/* Back to Pillar + CTA */}
       <section className="lp-cta">
         <div className="container">
@@ -116,6 +141,7 @@ export default function ProstheticClinicTambaram() {
         </div>
       </section>
 
+      <AreasServed />
       <Footer />
       <FloatingWhatsApp />
     </main>

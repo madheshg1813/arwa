@@ -2,12 +2,35 @@ import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import Faq from "@/components/Faq";
+import AreasServed from "@/components/AreasServed";
 import Link from "next/link";
+
+const faqs = [
+  { q: "Is ARWA Prosthetic Clinic accessible from Chrompet?", a: "Yes. Our clinic is located at Kamarajapuram, Chennai, which is just minutes from Chrompet via well-connected roads and local transport routes." },
+  { q: "What prosthetic services are available near Chrompet?", a: "Chrompet patients can access our full range of services including custom ocular prosthesis, scleral shells, scleral contact lenses, Rose K lenses, Ortho-K, keratoconus management, facial prosthetics, and low vision devices." },
+  { q: "How do I book an appointment from Chrompet?", a: "Simply call or WhatsApp us at +91 7200559344 to schedule a convenient appointment. We are open Monday to Saturday, 10:00 AM – 7:00 PM." },
+  { q: "How long does a prosthetic eye consultation take?", a: "The initial consultation typically lasts 30–60 minutes. Our specialist will assess your condition, discuss options, and guide you through the next steps for your prosthetic or optical solution." },
+  { q: "Do you offer scleral and Rose K lenses for keratoconus near Chrompet?", a: "Yes. We fit Rose K, Scleral, and Ortho-K lenses for keratoconus patients — available to patients travelling from Chrompet and surrounding areas." },
+  { q: "Is parking available at the clinic?", a: "Yes, parking is available near our Kamarajapuram clinic. The location is also well-served by public transport for patients from Chrompet travelling by bus or auto." },
+];
 
 export const metadata: Metadata = {
   title: "Prosthetic Clinic Near Chrompet | ARWA Optics & Prosthetic Center",
-  description: "Looking for a prosthetic clinic near Chrompet, Chennai? ARWA Optics & Prosthetic Center offers ocular prosthesis, facial prosthetics & scleral lenses. Easy access from Chrompet.",
-  keywords: "prosthetic clinic chrompet, artificial eye chrompet, ocular prosthesis near chrompet chennai",
+  description: "Looking for a prosthetic clinic near Chrompet? ARWA Optics & Prosthetic Center in Chennai is minutes from Chrompet — offering ocular prosthesis, facial prosthetics & scleral lenses.",
+  keywords: "prosthetic clinic chrompet, artificial eye chrompet, ocular prosthesis near chrompet, prosthetic clinic near chrompet chennai",
+  robots: { index: true, follow: true },
+  openGraph: {
+    title: "Prosthetic Clinic Near Chrompet | ARWA Optics & Prosthetic Center",
+    description: "Minutes from Chrompet — ARWA offers custom ocular prosthesis, scleral lenses & facial prosthetics in Chennai.",
+    images: [{ url: "/ocularist_work_1773675138301.png", width: 1200, height: 630, alt: "Prosthetic Clinic Near Chrompet" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Prosthetic Clinic Near Chrompet | ARWA Center",
+    description: "Custom prosthetic clinic near Chrompet, Chennai. Expert ocular prosthesis & scleral lenses.",
+    images: ["/ocularist_work_1773675138301.png"],
+  },
 };
 
 export default function ProstheticClinicChrompet() {
@@ -97,6 +120,8 @@ export default function ProstheticClinicChrompet() {
         </div>
       </section>
 
+      <Faq items={faqs} city="Chrompet" mapQuery="Chrompet, Chennai, Tamil Nadu" mapLink="https://maps.google.com/?q=Chrompet,Chennai,Tamil+Nadu" />
+
       {/* CTA */}
       <section className="lp-cta">
         <div className="container">
@@ -116,6 +141,7 @@ export default function ProstheticClinicChrompet() {
         </div>
       </section>
 
+      <AreasServed />
       <Footer />
       <FloatingWhatsApp />
     </main>

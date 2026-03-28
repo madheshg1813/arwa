@@ -2,12 +2,35 @@ import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import Faq from "@/components/Faq";
+import AreasServed from "@/components/AreasServed";
 import Link from "next/link";
+
+const faqs = [
+  { q: "Is ARWA Prosthetic Clinic accessible from Pallavaram?", a: "Yes. Our clinic at Kamarajapuram, Chennai is conveniently reachable from Pallavaram via GST Road and well-connected local routes." },
+  { q: "What prosthetic services are available near Pallavaram?", a: "Pallavaram patients have access to our full range including custom ocular prosthesis, scleral shells, Rose K lenses, Ortho-K, keratoconus management, facial prosthetics, and low vision devices." },
+  { q: "How do I book an appointment from Pallavaram?", a: "Call or WhatsApp us at +91 7200559344. We are open Monday to Saturday, 10:00 AM – 7:00 PM and can schedule at your convenience." },
+  { q: "What is a scleral shell prosthesis?", a: "A scleral shell is an ultra-thin prosthetic placed over a shrunken or disfigured existing eye. It restores natural appearance without removing the eye — lightweight and comfortable for daily wear." },
+  { q: "Are your prosthetic eyes made of safe materials?", a: "Yes. All prosthetic eyes are made from medical-grade PMMA (Polymethyl Methacrylate) — a biocompatible material that is non-reactive, durable, and safe for long-term wear." },
+  { q: "How many appointments are needed for a prosthetic eye?", a: "Typically 2–3 appointments: an initial assessment, a fitting session, and a follow-up for adjustments. The full process usually takes around one week from start to completion." },
+];
 
 export const metadata: Metadata = {
   title: "Prosthetic Clinic Near Pallavaram | ARWA Optics & Prosthetic Center",
-  description: "Need a prosthetic clinic near Pallavaram, Chennai? ARWA Optics & Prosthetic Center is easily accessible from Pallavaram — offering custom ocular prosthesis, facial prosthetics & more.",
-  keywords: "prosthetic clinic pallavaram, artificial eye pallavaram, ocular prosthesis near pallavaram chennai",
+  description: "Need a prosthetic clinic near Pallavaram? ARWA Optics & Prosthetic Center in Chennai is easily accessible from Pallavaram — custom ocular prosthesis, facial prosthetics & scleral lenses.",
+  keywords: "prosthetic clinic pallavaram, artificial eye pallavaram, ocular prosthesis near pallavaram, prosthetic clinic near pallavaram chennai",
+  robots: { index: true, follow: true },
+  openGraph: {
+    title: "Prosthetic Clinic Near Pallavaram | ARWA Optics & Prosthetic Center",
+    description: "Accessible from Pallavaram — ARWA offers custom ocular prosthesis, scleral lenses & facial prosthetics in Chennai.",
+    images: [{ url: "/ocularist_work_1773675138301.png", width: 1200, height: 630, alt: "Prosthetic Clinic Near Pallavaram" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Prosthetic Clinic Near Pallavaram | ARWA Center",
+    description: "Custom prosthetic clinic near Pallavaram, Chennai. Expert ocular prosthesis & scleral lenses.",
+    images: ["/ocularist_work_1773675138301.png"],
+  },
 };
 
 export default function ProstheticClinicPallavaram() {
@@ -97,6 +120,8 @@ export default function ProstheticClinicPallavaram() {
         </div>
       </section>
 
+      <Faq items={faqs} city="Pallavaram" mapQuery="Pallavaram, Chennai, Tamil Nadu" mapLink="https://maps.google.com/?q=Pallavaram,Chennai,Tamil+Nadu" />
+
       {/* CTA */}
       <section className="lp-cta">
         <div className="container">
@@ -116,6 +141,7 @@ export default function ProstheticClinicPallavaram() {
         </div>
       </section>
 
+      <AreasServed />
       <Footer />
       <FloatingWhatsApp />
     </main>

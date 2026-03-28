@@ -31,6 +31,15 @@ export default function Footer() {
           <Link href="/#care">Care Guide</Link>
           <Link href="/contact">Contact Us</Link>
         </div>
+        <div className="footer-services">
+          <h4>Our Services</h4>
+          <Link href="/prosthetic-clinic-chennai"><ion-icon name="chevron-forward"></ion-icon> Prosthetic Clinic Chennai</Link>
+          <Link href="/prosthetic-doctor-chennai"><ion-icon name="chevron-forward"></ion-icon> Prosthetic Doctor Chennai</Link>
+          <Link href="/prosthetic-clinic-tambaram"><ion-icon name="chevron-forward"></ion-icon> Prosthetic Clinic Tambaram</Link>
+          <Link href="/prosthetic-clinic-chrompet"><ion-icon name="chevron-forward"></ion-icon> Prosthetic Clinic Chrompet</Link>
+          <Link href="/prosthetic-clinic-pallavaram"><ion-icon name="chevron-forward"></ion-icon> Prosthetic Clinic Pallavaram</Link>
+          <Link href="/prosthetic-clinic-medavakkam"><ion-icon name="chevron-forward"></ion-icon> Prosthetic Clinic Medavakkam</Link>
+        </div>
         <div className="footer-contact-new">
           <h4>Connect With Us</h4>
           <div className="footer-info-item">

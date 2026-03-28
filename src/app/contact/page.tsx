@@ -1,8 +1,25 @@
-"use client";
-
+import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+
+export const metadata: Metadata = {
+  title: "Contact Us | ARWA Optics & Prosthetic Center Chennai",
+  description: "Book a consultation with ARWA Optics & Prosthetic Center in Chennai. Call +91 7200559344 or WhatsApp us. Located at No 2, Usman Street, Kamarajapuram, Chennai — 600072.",
+  keywords: "contact ARWA Chennai, ocular prosthesis appointment chennai, prosthetic clinic consultation chennai, artificial eye appointment",
+  robots: { index: true, follow: true },
+  openGraph: {
+    title: "Contact ARWA Optics & Prosthetic Center | Chennai",
+    description: "Book a confidential consultation with our certified ocularist in Chennai. Call or WhatsApp +91 7200559344.",
+    images: [{ url: "/ocularist_work_1773675138301.png", width: 1200, height: 630, alt: "ARWA Prosthetic Center Chennai" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact ARWA Optics & Prosthetic Center",
+    description: "Book a consultation with our certified ocularist in Chennai.",
+    images: ["/ocularist_work_1773675138301.png"],
+  },
+};
 
 export default function Contact() {
   return (

@@ -2,12 +2,35 @@ import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import Faq from "@/components/Faq";
+import AreasServed from "@/components/AreasServed";
 import Link from "next/link";
+
+const faqs = [
+  { q: "Is ARWA Prosthetic Clinic accessible from Medavakkam?", a: "Yes. Our clinic at Kamarajapuram, Chennai is reachable from Medavakkam via Pallavaram–Thoraipakkam Road and well-connected local transport routes." },
+  { q: "What prosthetic services are available near Medavakkam?", a: "Medavakkam patients can access our complete range: custom ocular prosthesis, scleral shells, Rose K lenses, Ortho-K, keratoconus management, facial prosthetics, and low vision devices." },
+  { q: "How do I book an appointment from Medavakkam?", a: "Call or WhatsApp +91 7200559344. We are open Monday to Saturday, 10:00 AM – 7:00 PM and will schedule at your convenience." },
+  { q: "What conditions does the prosthetic specialist treat?", a: "Our specialist treats anophthalmia, microphthalmia, phthisis bulbi, keratoconus, contracted eye sockets, and post-surgical facial defects requiring prosthetic rehabilitation." },
+  { q: "Do you provide keratoconus lens fitting near Medavakkam?", a: "Yes. We fit Rose K, Scleral, and Ortho-K lenses specially designed for keratoconus — providing clearer vision and better comfort than standard lenses." },
+  { q: "How long does fabrication of a custom prosthetic eye take?", a: "A custom ocular prosthesis typically takes 3–5 working days to fabricate after the initial fitting. Follow-up adjustments are included to ensure the perfect fit and comfort." },
+];
 
 export const metadata: Metadata = {
   title: "Prosthetic Clinic Near Medavakkam | ARWA Optics & Prosthetic Center",
-  description: "Looking for a prosthetic clinic near Medavakkam, Chennai? ARWA Optics & Prosthetic Center offers ocular prosthesis, scleral lenses & facial prosthetics. Easily reachable from Medavakkam.",
-  keywords: "prosthetic clinic medavakkam, artificial eye medavakkam, ocular prosthesis near medavakkam chennai",
+  description: "Looking for a prosthetic clinic near Medavakkam? ARWA Optics & Prosthetic Center in Chennai is reachable from Medavakkam — custom ocular prosthesis, scleral lenses & facial prosthetics.",
+  keywords: "prosthetic clinic medavakkam, artificial eye medavakkam, ocular prosthesis near medavakkam, prosthetic clinic near medavakkam chennai",
+  robots: { index: true, follow: true },
+  openGraph: {
+    title: "Prosthetic Clinic Near Medavakkam | ARWA Optics & Prosthetic Center",
+    description: "Reachable from Medavakkam — ARWA offers custom ocular prosthesis, scleral lenses & facial prosthetics in Chennai.",
+    images: [{ url: "/ocularist_work_1773675138301.png", width: 1200, height: 630, alt: "Prosthetic Clinic Near Medavakkam" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Prosthetic Clinic Near Medavakkam | ARWA Center",
+    description: "Custom prosthetic clinic near Medavakkam, Chennai. Expert ocular prosthesis & scleral lenses.",
+    images: ["/ocularist_work_1773675138301.png"],
+  },
 };
 
 export default function ProstheticClinicMedavakkam() {
@@ -97,6 +120,8 @@ export default function ProstheticClinicMedavakkam() {
         </div>
       </section>
 
+      <Faq items={faqs} city="Medavakkam" mapQuery="Medavakkam, Chennai, Tamil Nadu" mapLink="https://maps.google.com/?q=Medavakkam,Chennai,Tamil+Nadu" />
+
       {/* CTA */}
       <section className="lp-cta">
         <div className="container">
@@ -116,6 +141,7 @@ export default function ProstheticClinicMedavakkam() {
         </div>
       </section>
 
+      <AreasServed />
       <Footer />
       <FloatingWhatsApp />
     </main>
