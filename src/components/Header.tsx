@@ -3,8 +3,17 @@
 import { useState } from "react";
 import Link from "next/link";
 
+const cityLinks = [
+  { name: "Prosthetic Clinic — Chennai", href: "/prosthetic-clinic-chennai" },
+  { name: "Prosthetic Clinic — Tambaram", href: "/prosthetic-clinic-tambaram" },
+  { name: "Prosthetic Clinic — Chrompet", href: "/prosthetic-clinic-chrompet" },
+  { name: "Prosthetic Clinic — Pallavaram", href: "/prosthetic-clinic-pallavaram" },
+  { name: "Prosthetic Clinic — Medavakkam", href: "/prosthetic-clinic-medavakkam" },
+];
+
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [cityOpen, setCityOpen] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
@@ -52,8 +61,28 @@ export default function Header() {
             </div>
             <ul className="nav-links">
               <li><Link href="/">Home</Link></li>
-              <li><Link href="/#services">Services</Link></li>
-              <li><Link href="/#about">About</Link></li>
+              <li className="nav-dropdown">
+                <span className="nav-dropdown-trigger">
+                  Services <ion-icon name="chevron-down-outline"></ion-icon>
+                </span>
+                <ul className="dropdown-menu">
+                  <li className="nav-dropdown-nested">
+                    <Link href="/prosthetic-clinic-chennai" className="dropdown-nested-trigger">
+                      Prosthetic Clinic in Chennai <ion-icon name="chevron-forward-outline"></ion-icon>
+                    </Link>
+                    <ul className="dropdown-submenu">
+                      {cityLinks.slice(1).map((c) => (
+                        <li key={c.href}>
+                          <Link href={c.href}>
+                            <ion-icon name="location-outline"></ion-icon>
+                            {c.name.replace("Prosthetic Clinic — ", "")}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </li>
+                </ul>
+              </li>
               <li><Link href="/#expertise">Technology</Link></li>
               <li><Link href="/#care">Care Guide</Link></li>
               <li><Link href="/contact">Contact</Link></li>
@@ -77,7 +106,25 @@ export default function Header() {
           <div className="mobile-menu-body">
             <p className="m-mission">Restoring confidence and vision through precision ocular prosthetics.</p>
             <ul className="mobile-nav-links">
-              <li><Link href="/#services" onClick={toggleMenu}><ion-icon name="medical-outline"></ion-icon> Specialized Services</Link></li>
+              <li>
+                <button className="m-dropdown-btn" onClick={() => setCityOpen(!cityOpen)}>
+                  <span><ion-icon name="medical-outline"></ion-icon> Services</span>
+                  <ion-icon name={cityOpen ? "chevron-up-outline" : "chevron-down-outline"}></ion-icon>
+                </button>
+                {cityOpen && (
+                  <ul className="m-dropdown-list">
+                    <li className="m-dropdown-label">Prosthetic Clinic in Chennai</li>
+                    {cityLinks.slice(1).map((c) => (
+                      <li key={c.href}>
+                        <Link href={c.href} onClick={toggleMenu}>
+                          <ion-icon name="location-outline"></ion-icon>
+                          {c.name.replace("Prosthetic Clinic — ", "")}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </li>
               <li><Link href="/#expertise" onClick={toggleMenu}><ion-icon name="flask-outline"></ion-icon> Clinical Technology</Link></li>
               <li><Link href="/#care" onClick={toggleMenu}><ion-icon name="heart-outline"></ion-icon> Maintenance Guide</Link></li>
               <li><Link href="/contact" onClick={toggleMenu}><ion-icon name="mail-outline"></ion-icon> Official Consultation</Link></li>
