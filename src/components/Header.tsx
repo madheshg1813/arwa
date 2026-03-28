@@ -22,13 +22,13 @@ export default function Header() {
             </span>
           </div>
           <div className="social-links">
-            <a href="#">
+            <a href="https://wa.me/917200559344" target="_blank" rel="noopener noreferrer">
               <ion-icon name="logo-whatsapp"></ion-icon>
             </a>
-            <a href="#">
+            <a href="https://www.facebook.com/profile.php?id=61576506330321" target="_blank" rel="noopener noreferrer">
               <ion-icon name="logo-facebook"></ion-icon>
             </a>
-            <a href="#">
+            <a href="https://www.instagram.com/arwainternationalindia/" target="_blank" rel="noopener noreferrer">
               <ion-icon name="logo-instagram"></ion-icon>
             </a>
           </div>
@@ -86,9 +86,9 @@ export default function Header() {
             <div className="m-social-box">
               <span>Follow Us</span>
               <div className="m-social-links">
-                <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
-                <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
-                <a href="https://wa.me/917200559344"><ion-icon name="logo-whatsapp"></ion-icon></a>
+                <a href="https://www.facebook.com/profile.php?id=61576506330321" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-facebook"></ion-icon></a>
+                <a href="https://www.instagram.com/arwainternationalindia/" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-instagram"></ion-icon></a>
+                <a href="https://wa.me/917200559344" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-whatsapp"></ion-icon></a>
               </div>
             </div>
           </div>

@@ -12,10 +12,10 @@ export default function Footer() {
             vision, confidence, and quality of life.
           </p>
           <div className="f-socials">
-            <a href="#">
+            <a href="https://www.facebook.com/profile.php?id=61576506330321" target="_blank" rel="noopener noreferrer">
               <ion-icon name="logo-facebook"></ion-icon>
             </a>
-            <a href="#">
+            <a href="https://www.instagram.com/arwainternationalindia/" target="_blank" rel="noopener noreferrer">
               <ion-icon name="logo-instagram"></ion-icon>
             </a>
             <a href="https://wa.me/917200559344">
